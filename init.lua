@@ -9,12 +9,8 @@ local has = function(x)
 end
 
 
-local is_mac = has "macunix"
 local is_win = has "win32"
 
-if is_mac then
-  require('macos')
-end
 
 if is_win then
   require('windows')
@@ -26,7 +22,7 @@ end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set termguicolors to enable highlight groups
+-- set termGUIcolors to enable highlight groups
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
