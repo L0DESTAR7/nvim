@@ -185,6 +185,20 @@ nvim_lsp.dockerls.setup {
   single_file_support = true
 }
 
+nvim_lsp.yamlls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { 'docker-langserver', '--stdio' },
+  filetypes = { 'yaml', 'yaml.docker-compose' },
+  settings = {
+    redhat = {
+      telemetry = {
+        enabled = false
+      }
+    }
+  },
+  single_file_support = true
+}
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
