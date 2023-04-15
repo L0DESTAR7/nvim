@@ -201,6 +201,19 @@ nvim_lsp.yamlls.setup {
 }
 
 
+nvim_lsp.prismals.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { 'prisma-language-server', '--stdio' },
+  filetypes = { 'prisma' },
+  settings = {
+    prisma = {
+      prismaFmtBinPath = ""
+    }
+  }
+}
+
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
