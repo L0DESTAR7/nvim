@@ -177,7 +177,13 @@ nvim_lsp.pylsp.setup {
 }
 
 
-
+nvim_lsp.dockerls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { 'docker-langserver', '--stdio' },
+  filetypes = { 'dockerfile' },
+  single_file_support = true
+}
 
 
 
