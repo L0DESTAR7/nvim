@@ -35,3 +35,6 @@ keymap.set('n', '<C-down>', '<C-w>-')
 
 -- Toggle NvimTree file explorer
 keymap.set('n', 'tt', ':NvimTreeToggle<Return>', { silent = false })
+
+-- Show error
+keymap.set('n', '<C-e>', ':lua vim.diagnostic.open_float()<Return>', { silent = true })
