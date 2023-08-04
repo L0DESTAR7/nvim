@@ -8,10 +8,11 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- Plugin manager
-  use {
-    'svrana/neosolarized.nvim', -- Neosolarized color theme
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+  -- use {
+  --  'svrana/neosolarized.nvim', -- Neosolarized color theme
+  --  requires = { 'tjdevries/colorbuddy.nvim' }
+  --}
+  use { "bluz71/vim-nightfly-colors", as = "nightfly" }
   use {
     'hoob3rt/lualine.nvim' -- Statusline
   }

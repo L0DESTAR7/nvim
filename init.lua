@@ -24,6 +24,20 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termGUIcolors to enable highlight groups
 vim.opt.termguicolors = true
+-- Set colorscheme background color to transparent
+vim.g.nightflyTransparent = true
+-- Customize String color
+local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "nightfly",
+  callback = function()
+    vim.api.nvim_set_hl(0, "String", { fg = "#00FFA3", bold = true })
+  end,
+  group = custom_highlight,
+})
+-- Set colorscheme
+vim.cmd [[colorscheme nightfly]]
+
 
 -- empty setup using defaults
 require("nvim-tree").setup()
