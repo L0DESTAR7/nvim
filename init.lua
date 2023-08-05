@@ -26,7 +26,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 -- Set colorscheme background color to transparent
 vim.g.nightflyTransparent = true
--- Customize String color
+-- Customize nightfly String color
 local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "nightfly",
