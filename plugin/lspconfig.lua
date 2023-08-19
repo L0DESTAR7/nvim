@@ -136,6 +136,13 @@ nvim_lsp.clangd.setup {
   cmd = { "clangd" },
 }
 
+nvim_lsp.lemminx.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "xml", "xsd", "xsl", "xslt", "svg", "wxs", "wixproj", "wxl" },
+  single_file_support = true,
+}
+
 nvim_lsp.ltex.setup {
   on_attach = on_attach,
   cmd = { 'ltex-ls' },

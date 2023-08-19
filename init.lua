@@ -66,3 +66,6 @@ require("nvim-tree").setup({
 -- Mason section ------------------------------------------------------------------------
 require('mason').setup()
 require('mason-lspconfig').setup()
+
+
+-- Custom filetype highlighting ------------------------------------------------------------------------
