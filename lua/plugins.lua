@@ -21,7 +21,7 @@ packer.startup(function(use)
     tag = "v<CurrentMajor>.*"
   }
   use {
-    'glepnir/lspsaga.nvim' -- LSP UI
+    'nvimdev/lspsaga.nvim' -- LSP UI
   }
   use {
     'nvim-treesitter/nvim-treesitter',
