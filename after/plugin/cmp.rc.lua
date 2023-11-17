@@ -24,7 +24,7 @@ cmp.setup({
     { name = 'luasnip' },
   }),
   formatting = {
-    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+    format = lspkind.cmp_format({ with_text = true, maxwidth = 50 })
   }
 })
 cmp.setup.filetype('gitcommit', {
@@ -45,11 +45,8 @@ cmp.setup.cmdline({ '/', '?' }, {
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
-  mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
+    { name = 'cmdline' },
   })
 })
 
