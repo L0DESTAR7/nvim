@@ -82,10 +82,16 @@ packer.startup(function(use)
     branch = 'stable'
   }
   use {
-    "goolord/alpha-nvim",
+    "goolord/alpha-nvim", -- Dashboard
     requires = {
       "nvim-tree/nvim-web-devicons"
     }
+  }
+  use {
+    "NvChad/nvim-colorizer.lua", -- Colorizes text color values
+  }
+  use {
+    "roobert/tailwindcss-colorizer-cmp.nvim", -- Colorizes autocomplete color values
   }
   use {
     'MunifTanjim/prettier.nvim' -- Prettier for code formatting with nvim LSP

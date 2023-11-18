@@ -1,6 +1,7 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 local lspkind = require 'lspkind'
+local tailwincss_colorizer = require 'tailwindcss-colorizer-cmp'
 
 cmp.setup({
   snippet = {
@@ -24,7 +25,13 @@ cmp.setup({
     { name = 'luasnip' },
   }),
   formatting = {
-    format = lspkind.cmp_format({ with_text = true, maxwidth = 50 })
+    format = lspkind.cmp_format({
+      with_text = true,
+      maxwidth = 50,
+      before = function(entry, vim_item)
+        return tailwincss_colorizer.formatter(entry, vim_item)
+      end
+    })
   }
 })
 cmp.setup.filetype('gitcommit', {
