@@ -82,6 +82,12 @@ packer.startup(function(use)
     branch = 'stable'
   }
   use {
+    "goolord/alpha-nvim",
+    requires = {
+      "nvim-tree/nvim-web-devicons"
+    }
+  }
+  use {
     'MunifTanjim/prettier.nvim' -- Prettier for code formatting with nvim LSP
   }
   use {

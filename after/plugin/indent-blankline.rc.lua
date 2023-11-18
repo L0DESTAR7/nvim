@@ -13,4 +13,12 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 end)
 
 
-ibl.setup {indent = {highlight = highlight}, scope = {enabled = false}}
+ibl.setup {
+  indent = {highlight = highlight},
+  scope = {enabled = false},
+  exclude = {
+    filetypes = {
+        "alpha"
+    }
+  }
+}
