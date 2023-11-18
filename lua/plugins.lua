@@ -78,6 +78,10 @@ packer.startup(function(use)
     "lukas-reineke/indent-blankline.nvim", -- Indent line markers
   }
   use {
+    "echasnovski/mini.indentscope", -- Animated indentscope lines
+    branch = 'stable'
+  }
+  use {
     'MunifTanjim/prettier.nvim' -- Prettier for code formatting with nvim LSP
   }
   use {
