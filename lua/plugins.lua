@@ -30,7 +30,7 @@ packer.startup(function(use)
     },
   }
   use {
-    'nvim-telescope/telescope.nvim', tag ='0.1.4',
+    'nvim-telescope/telescope.nvim', tag ='0.1.4', -- Telescope fuzzy finder (files, string, selection...)
     requires = {
       "nvim-lua/plenary.nvim"
     }
@@ -73,6 +73,9 @@ packer.startup(function(use)
   }
   use {
     'hrsh7th/nvim-cmp', -- Completion
+  }
+  use {
+    "lukas-reineke/indent-blankline.nvim", -- Indent line markers
   }
   use {
     'MunifTanjim/prettier.nvim' -- Prettier for code formatting with nvim LSP
