@@ -94,6 +94,9 @@ packer.startup(function(use)
     "roobert/tailwindcss-colorizer-cmp.nvim", -- Colorizes autocomplete color values
   }
   use {
+    "lewis6991/gitsigns.nvim", -- Git signs to display added, remove and changed lines
+  }
+  use {
     'MunifTanjim/prettier.nvim' -- Prettier for code formatting with nvim LSP
   }
   use {
