@@ -24,6 +24,18 @@ packer.startup(function(use)
     'nvimdev/lspsaga.nvim' -- LSP UI
   }
   use {
+    'folke/todo-comments.nvim', -- TODO, HACK, PERF, NOTE, FIX etc with highlights & utilities
+    requires = {
+      "nvim-lua/plenary.nvim"
+    },
+  }
+  use {
+    'nvim-telescope/telescope.nvim', tag ='0.1.4',
+    requires = {
+      "nvim-lua/plenary.nvim"
+    }
+  }
+  use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
