@@ -12,7 +12,7 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
   dashboard.button( "e", "  New file" , ":ene <BAR> startinsert <CR>"),
   dashboard.button("ff", "  Find file", ":Telescope find_files<CR>"),
-  dashboard.button("fg", "󰺯  Find string", ":Telescope grep_string<CR>"),
+  dashboard.button("fg", "󰺯  Find string", ":Telescope live_grep<CR>"),
   dashboard.button("fc", "󰺯  View Git commits", ":Telescope git_commits<CR>"),
   dashboard.button("ft", "󰭎  Open telescope", ":Telescope<CR>"),
   dashboard.button("GC", "  Configuration", ":cd $LOCALAPPDATA/nvim<CR>:NvimTreeOpen<CR>"),

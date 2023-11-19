@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Lodestar\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Lodestar\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Lodestar\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
@@ -154,6 +159,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Lodestar\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\Lodestar\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua",
+    url = "https://github.com/NvChad/nvim-colorizer.lua"
+  },
   ["nvim-jdtls"] = {
     loaded = true,
     path = "C:\\Users\\Lodestar\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-jdtls",
@@ -198,6 +208,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Lodestar\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
+  ["tailwindcss-colorizer-cmp.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Lodestar\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tailwindcss-colorizer-cmp.nvim",
+    url = "https://github.com/roobert/tailwindcss-colorizer-cmp.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

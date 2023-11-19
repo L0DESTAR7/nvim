@@ -75,6 +75,9 @@ packer.startup(function(use)
     'hrsh7th/nvim-cmp', -- Completion
   }
   use {
+    'davidgranstrom/nvim-markdown-preview'
+  }
+  use {
     "lukas-reineke/indent-blankline.nvim", -- Indent line markers
   }
   use {

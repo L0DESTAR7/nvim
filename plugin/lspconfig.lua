@@ -138,30 +138,6 @@ nvim_lsp.lemminx.setup {
   single_file_support = true,
 }
 
-nvim_lsp.ltex.setup {
-  on_attach = on_attach,
-  cmd = { 'ltex-ls' },
-  filetypes = { 'tex', 'bib', 'markdown' },
-  capabilities = capabilities,
-  settings = {
-    ltex = {
-      enabled = { 'latex', 'tex', 'bib', 'markdown' },
-      checkFrequency = 'edit',
-      language = 'en',
-      diagnosticSeverity = 'information',
-      setenceCacheSize = 2000,
-      additionalRules = {
-        enablePickyRules = true,
-        motherTongue = 'en',
-      },
-      dictionary = {},
-      disabledRules = {},
-      hiddenFalsePositives = {},
-    },
-  },
-}
-
-
 nvim_lsp.pylsp.setup {
   cmd = { "pylsp" },
   filetypes = { "python" },
