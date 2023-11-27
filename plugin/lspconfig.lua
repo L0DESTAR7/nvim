@@ -191,6 +191,20 @@ nvim_lsp.prismals.setup {
   }
 }
 
+nvim_lsp.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {'rust-analyzer'},
+  filtypes = { 'rust' },
+  root_dir = nvim_lsp.util.root_pattern("Cargo.toml", "rust-project.json"),
+  settings = {
+    ['rust-analyzer'] = {
+      diagnostics = {
+        enable = false;
+      }
+    }
+  }
+}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
