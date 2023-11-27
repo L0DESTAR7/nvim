@@ -206,6 +206,14 @@ nvim_lsp.rust_analyzer.setup {
   }
 }
 
+nvim_lsp.graphql.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd =  {'graphql-lsp', 'server', '-m', 'stream'},
+  filetypes = {'graphql', 'typescriptreact', 'javascriptreact'},
+  root_dir = nvim_lsp.util.root_pattern(".git", "-graphqlrc*", ".graphql.config.*", "graphql.config.*"),
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
