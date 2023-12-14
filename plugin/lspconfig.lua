@@ -110,7 +110,31 @@ nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "css", "scss", "less" },
   cmd = { "tailwindcss-language-server.cmd", "--stdio" },
-  capabilities = capabilities
+  capabilities = capabilities,
+  settings = {
+    tailwindCSS = {
+      classAttributes = { "class", "className", "class:list", "classList", "ngClass", "style" },
+      lint = {
+        cssConflict = "warning",
+        invalidApply = "error",
+        invalidConfigPath = "error",
+        invalidScreen = "error",
+        invalidTailwindDirective = "error",
+        invalidVariant = "error",
+        recommendedVariantOrder = "warning"
+      },
+      validate = true,
+      experimental = {
+        classRegex = {
+          "tw`([^`]*)", -- tw`...`
+          "tw=\"([^\"]*)", -- <div tw="..." />
+          "tw={\"([^\"}]*)", -- <div tw={"..."} />
+          "tw\\.\\w+`([^`]*)", -- tw.xxx`...`
+          "tw\\(.*?\\)`([^`]*)"
+        }
+      }
+    }
+  }
 }
 
 nvim_lsp.cssls.setup {
@@ -195,7 +219,7 @@ nvim_lsp.rust_analyzer.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = {'rust-analyzer'},
-  filtypes = { 'rust' },
+  filetypes = { 'rust' },
   root_dir = nvim_lsp.util.root_pattern("Cargo.toml", "rust-project.json"),
   settings = {
     ['rust-analyzer'] = {
@@ -204,6 +228,13 @@ nvim_lsp.rust_analyzer.setup {
       }
     }
   }
+}
+
+nvim_lsp.sqlls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {'sql-language-server', 'up', '--method', 'stdio'},
+  filetypes = {"sql", "mysql"},
 }
 
 nvim_lsp.graphql.setup {
