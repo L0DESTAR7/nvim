@@ -5,7 +5,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
-local workspace_dir = 'C:/Users/USER/Java Workspace data/' .. project_name
+local workspace_dir = 'C:/Users/Lodestar/Java Workspace data/' .. project_name
 --                                               ^^
 --                                               string concattenation in Lua
 
@@ -24,20 +24,20 @@ local config = {
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
     '-Dlog.protocol=true',
     '-Dlog.level=ALL',
-    '-Xms1g',
+    '-Xms4g',
     '--add-modules=ALL-SYSTEM',
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 
     -- 💀
-    '-jar', 'C:/Users/USER/Java jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+    '-jar', 'C:/Users/Lodestar/Java jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
     -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
     -- Must point to the                                                     Change this to
     -- eclipse.jdt.ls installation                                           the actual version
 
 
     -- 💀
-    '-configuration', 'C:/Users/USER/Java jdtls/config_win',
+    '-configuration', 'C:/Users/Lodestar/Java jdtls/config_win',
     -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
     -- Must point to the                      Change to one of `linux`, `win` or `mac`
     -- eclipse.jdt.ls installation            Depending on your system.
@@ -59,7 +59,30 @@ local config = {
   -- for a list of options
   settings = {
     java = {
-    }
+      project = {
+        referencedLibraries = {
+          'C:/Users/Lodestar/Developement/tools/jars/antlr-4.13.1-complete.jar',
+        },
+      },
+      format = {
+        settings = {
+          url = "C:/Users/Lodestar/Java jdtls/eclipse-java-google-style.xml",
+          profile = "GoogleStyle",
+        }
+      },
+      signatureHelp = { enabled = true },
+      contentProvider = { preferred = 'fernflower' },
+
+      completion = {
+        filteredTypes = {
+          "com.sun.*",
+          "io.micrometer.shaded.*",
+          "java.awt.*",
+          "jdk.*", "sun.*",
+        },
+      },
+
+    },
   },
 
   -- Language server `initializationOptions`
